@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BiSearchAlt2 } from "react-icons/bi";
 import "../styles/Header.css";
+import img from "../assets/film_lib_icon.png";
+
 
 const Header = () => {
     const [search, setSearch] = useState("");
@@ -19,7 +21,10 @@ const Header = () => {
     return (
         <header className="header">
             <div className="home">
-                <a href="/">Filmes</a>
+                <a href="/">
+                    <img src={img} alt="Film Lib Icon" className="header-icon" />
+                    Film Lib
+                </a>
             </div>
             <nav className="nav">
                 <form onSubmit={handleSubmit}>

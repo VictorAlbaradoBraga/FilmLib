@@ -1,18 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"; 
 import MovieCard from "../components/MovieCard";
 
+// URL da API
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
 const Home = () => {
-    const [topMovies, setTopMovies] = useState([])
+    const [topMovies, setTopMovies] = useState([]);
+    const [loading, setLoading] = useState(true); // Estado de carregamento
 
     const getTopRatedMovies = async (url) => {
-
-        const res = await fetch(url)
+        const res = await fetch(url);
         const data = await res.json();
 
         setTopMovies(data.results);
+        setLoading(false); // Dados carregados, mudar o estado para false
     };
 
     useEffect(() => {
@@ -22,17 +24,26 @@ const Home = () => {
 
     }, []);
 
+    // Componente de carregamento (spinner)
+    const LoadingSpinner = () => (
+        <div className="loading-spinner">
+            <div className="spinner"></div>
+            <p>Carregando...</p>
+        </div>
+    );
+
     return (
         <div className="container">
             <h2>Filmes Populares</h2>
             <div className="movies-container">
-                {topMovies.length === 0 && <p>Carregando...</p>}
-                {topMovies.length > 0 && 
-                    topMovies.map((movie) => <MovieCard key={movie.id} movie={movie}/>)}
+                {loading ? (
+                    <LoadingSpinner /> // Exibe o spinner enquanto os dados estão carregando
+                ) : (
+                    topMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)
+                )}
             </div>
         </div>
     );
-    
 };
 
-export default Home
+export default Home;

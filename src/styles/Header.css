@@ -16,7 +16,15 @@
     font-weight: bold;
 }
 
+.header-icon {
+    width: 64px; /* Ajuste o tamanho do ícone */
+    height: 64px; /* Ajuste o tamanho do ícone */
+    margin-right: 8px; /* Espaço entre o ícone e o nome */
+}
+
 .home a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: #d6d6f5;
     transition: color 0.3s;
