@@ -1,0 +1,75 @@
+/* Clean Cyberpunk-Inspired Header CSS */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1e1e2f; /* Dark clean background */
+    border-bottom: 1px solid #3a3a5e; /* Subtle border */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    color: #d6d6f5; /* Soft cyan text */
+    font-family: 'Roboto', sans-serif; /* Modern clean font */
+}
+
+.home {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.home a {
+    text-decoration: none;
+    color: #d6d6f5;
+    transition: color 0.3s;
+}
+
+.home a:hover {
+    color: #76c7c0; /* Soft teal on hover */
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav input[type="text"] {
+    padding: 8px 12px;
+    border: 1px solid #3a3a5e;
+    background-color: #1e1e2f;
+    color: #d6d6f5;
+    font-size: 16px;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.nav input[type="text"]:focus {
+    border-color: #76c7c0;
+}
+
+.nav button {
+    padding: 8px 12px;
+    background-color: #76c7c0;
+    border: none;
+    color: #1e1e2f;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav button:hover {
+    background-color: #d6d6f5;
+    color: #1e1e2f;
+}
+
+.nav button svg {
+    font-size: 20px;
+}

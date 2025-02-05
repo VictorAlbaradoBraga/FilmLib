@@ -1,0 +1,132 @@
+.movie-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #1e1e2f;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: #d6d6f5;
+    font-family: 'Roboto', sans-serif;
+}
+
+.movie-main {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.movie-main img {
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.movie-details {
+    flex: 1;
+}
+
+.movie-details h1 {
+    font-size: 24px;
+    color: #76c7c0;
+}
+
+.movie-subtitle {
+    font-size: 14px;
+    color: #b0b0d9;
+    margin-bottom: 10px;
+}
+
+.movie-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.vote-circle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.vote-circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.trailer-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #2a2a4a;
+    color: #76c7c0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+    border: none;  /* Remove qualquer borda existente */
+    box-shadow: none;  /* Garantir que não haja sombra que possa estar gerando o efeito */
+  
+}
+
+.trailer-button:hover {
+    background: #3a3a5e;
+    color: #d6d6f5;
+    border: none;  /* Também remover a borda no estado de hover */
+}
+  
+.movie-synopsis h2 {
+    font-size: 20px;
+    color: #76c7c0;
+    border-bottom: 2px solid #3a3a5e;
+    padding-bottom: 5px;
+}
+
+/* Container de informações adicionais */
+.movie-info {
+    margin-top: 40px;
+    background-color: #25253a;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.movie-info h2 {
+    font-size: 20px;
+    color: #76c7c0;
+    border-bottom: 2px solid #3a3a5e;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.crew-info, .extra-info {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.crew-info div, .extra-info div {
+    flex: 1;
+    background: #25253a;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.crew-info h3, .extra-info h3 {
+    font-size: 14px;
+    color: #b0b0d9;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.crew-info p, .extra-info p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d6d6f5;
+}

@@ -1,0 +1,26 @@
+/* Clean Cyberpunk-Inspired App Layout CSS */
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #121212; /* Dark overall background */
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+/* Body Cleanup */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark immersive background */
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
